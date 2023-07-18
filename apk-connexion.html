@@ -1,0 +1,2405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- <head> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RNF">
+<meta name="keywords" content="RNF">
+<title>Services Publics</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+	<link rel="manifest" href="./assets/img/site.webmanifest">
+
+
+<link rel="stylesheet" href="./plugins/alertify/css/alertify.min.css">
+<link rel="stylesheet" href="./plugins/alertify/css/themes/bootstrap.min.css">
+<!--link rel="stylesheet" href="./plugins/material-bootstrap-design/material-bootstrap-wizard.css"-->
+<link rel="stylesheet" href="./plugins/notify/pnotify.custom.min.css">
+<link rel="stylesheet" href="./plugins/colorbox/colorbox.css">
+<link rel="stylesheet" href="./plugins/flexselect/flexselect.css">
+<link rel="stylesheet" href="./assets/css/plugins.css">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/custom-style.css">
+	<link rel="stylesheet" href="./assets/css/fonts/bootstrap-icons.css">
+<!-- <link rel="stylesheet" href="./assets/css/tools.css">
+	<link rel="stylesheet" href="./assets/css/auth.css">
+	<link rel="stylesheet" href="./assets/css/historique.css">
+	<link rel="stylesheet" href="./assets/css/intlTelInput.css" />
+
+</head> -->
+
+<style>
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+select,
+textarea,
+#card-element,
+.et_card_number {
+    position: relative;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    /*background: rgba(109, 124, 144, .1);*/
+    /*background: rgba(91, 106, 82, .1);*/
+    background: rgba(128, 142, 205, .1);
+    width: 100%;
+    margin: 16px 0;
+    padding: 8px 12px;
+    text-align: left;
+    border: 2px solid transparent;
+    transition: 300ms all cubic-bezier(.4, 0, .2, 1);
+    font-size: .9em;
+    font-family: lato, sans-serif;
+    line-height: 1.8em;
+    letter-spacing: .5px;
+    font-weight: 700;
+    color: #20292f;
+    outline: none
+}
+
+.et_manage_input input:hover:not(.no-edit),
+.et_manage_input select:hover:not(.no-edit),
+.et_manage_input textarea:hover:not(.no-edit),
+.et_manage_input input:focus:not(.no-edit),
+.et_manage_input select:focus:not(.no-edit),
+.et_manage_input textarea:focus:not(.no-edit) {
+    border: 2px solid #3776ff
+}
+
+.form-select
+{
+	width: 100%;
+	border: none;
+    border-radius: 5px;
+	font-size: .9em;
+    font-family: lato, sans-serif;
+    line-height: 1.8em;
+    letter-spacing: .5px;
+    font-weight: 700;
+    color: #20292f;
+    outline: none
+	/*background-color: rgba(91, 106, 82, .1);*/
+	background-color: rgba(128, 142, 205, .1);
+	background: rgba(128, 142, 205, .1);
+}
+
+.bgHome
+{
+	background-image : url('./assets/img/Banner_Home.png');
+	background-repeat: no-repeat;
+}
+
+.bgHome2
+{
+	background-image : url('./assets/img/Banniere_Acceuil.png');
+	background-repeat: no-repeat;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="RNF">
+	<meta name="keywords" content="RNF">
+	<meta name="author" content="elemis">
+	<title>Services Publics</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+	<link rel="manifest" href="./assets/img/site.webmanifest">
+	
+	
+	<link rel="stylesheet" href="./plugins/bootstrap/css/bootstrap4.4.1.min.css">
+	<link rel="stylesheet" href="./plugins/alertify/css/alertify.min.css">
+	<link rel="stylesheet" href="./plugins/alertify/css/themes/bootstrap.min.css">
+	<!--link rel="stylesheet" href="./plugins/material-bootstrap-design/material-bootstrap-wizard.css"-->
+	<link rel="stylesheet" href="./plugins/notify/pnotify.custom.min.css">
+	<link rel="stylesheet" href="./plugins/simple-datatables/simple-datatables.css">
+	<link rel="stylesheet" href="./plugins/flexselect/flexselect.css">
+	<link rel="stylesheet" href="./assets/css/plugins.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/custom-style.css">
+	<link rel="stylesheet" href="./assets/css/tools.css">
+	<link rel="stylesheet" href="./assets/css/intlTelInput.css"/>
+	<link rel="stylesheet" href="./assets/css/fonts/bootstrap-icons.css">
+		
+	<link href="./plugins/daterangepicker/daterangepicker.css" rel="stylesheet">
+	<link href="./plugins/colorbox/colorbox.css" type="text/css" media="screen" id="BoxCss" rel="stylesheet" />
+	<link href="./plugins/notify/pnotify.custom.min.css" rel="stylesheet">
+	<link href="./plugins/flexselect/flexselect.css" type="text/css" media="screen" rel="stylesheet" />
+	<link href="./plugins/intlTelInput/css/intlTelInput.min.css" media="all" rel="stylesheet">
+	
+	<link rel="stylesheet" href="./assets/css/admin.css"/>
+	
+	
+	<style>
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+select,
+textarea,
+#card-element,
+.et_card_number {
+    position: relative;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    /*background: rgba(109, 124, 144, .1);*/
+    /*background: rgba(91, 106, 82, .1);*/
+    background: rgba(128, 142, 205, .1);
+    width: 100%;
+    margin: 16px 0;
+    padding: 8px 12px;
+    text-align: left;
+    border: 2px solid transparent;
+    transition: 300ms all cubic-bezier(.4, 0, .2, 1);
+    font-size: .9em;
+    font-family: lato, sans-serif;
+    line-height: 1.8em;
+    letter-spacing: .5px;
+    font-weight: 700;
+    color: #20292f;
+    outline: none
+}
+
+.et_manage_input input:hover:not(.no-edit),
+.et_manage_input select:hover:not(.no-edit),
+.et_manage_input textarea:hover:not(.no-edit),
+.et_manage_input input:focus:not(.no-edit),
+.et_manage_input select:focus:not(.no-edit),
+.et_manage_input textarea:focus:not(.no-edit) {
+    border: 2px solid #3776ff
+}
+
+.form-select
+{
+	width: 100%;
+	border: none;
+    border-radius: 5px;
+	font-size: .9em;
+    font-family: lato, sans-serif;
+    line-height: 1.8em;
+    letter-spacing: .5px;
+    font-weight: 700;
+    color: #20292f;
+    outline: none
+	/*background-color: rgba(91, 106, 82, .1);*/
+	background-color: rgba(128, 142, 205, .1);
+	background: rgba(128, 142, 205, .1);
+}
+</style>
+<style>
+.tabGreen, .tabGreen a, .tabGreen a.active
+{
+	background-color: honeydew !important;
+}
+.tabRed, .tabRed a, .tabRed a.active
+{
+	background-color: mistyrose !important;
+}
+.tabYellow, .tabYellow a, .tabYellow a.active
+{
+	background-color: lightgoldenrodyellow !important;
+}
+
+input.form-control, select.form-control {
+	font-size: 0.8rem !important;
+}
+
+
+.bgSynth01{ 
+	background-color: #ffaf31 !important;
+}
+.bgSynth02{ 
+	background-color: #9E9F3E !important;
+}
+.bgSynth03{ 
+	background-color: #0ADAC9 !important;
+}
+.bgSynth04{ 
+	    background-color: rgb(12, 168, 218) !important;
+}
+.bgSynth05{ 
+	background-color: #9D55E8 !important;
+}
+.bgSynth06{ 
+	background-color: #ffaf31 !important;
+}
+
+.bgHome
+{
+	background-image : url('./assets/img/Banner_Home.png');
+}
+</style>
+</head>
+
+
+	<link rel="stylesheet" href="./assets/css/processEvent.css">
+<body onload="xajax_bkSetEvent('loginPage')">
+<div class="content-wrapper text-justify">
+    <!-- content header-->
+         
+
+<header class="wrapper ">
+	<nav class="navbar navbar-expand-lg center-nav transparent position-absolute navbar-light caret-none" style="background-color: #417a62;">
+		<div class="container flex-lg-row flex-nowrap align-items-center">
+			<div class="navbar-brand w-100">
+				<a href="./home">
+					<img class="logo-dark" src="./assets/img/logo-sp-01_white.png" alt=""
+						 srcset="./assets/imglogo-sp-01_white.png 8x" width="auto" height="50"/>
+					<img class="logo-light" src="./assets/img/logo-sp-01_white.png" srcset="./assets/img/logo-sp-01_white.png 8x" alt="" width="auto" height="50"/>
+				</a>
+			</div>
+			<div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+				<div class="offcanvas-header d-lg-none">
+					<h3 class="text-white fs-30 mb-0"><i class="uil uil-home"></i> Services Publics</h3>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown dropdown-mega">
+							<a class="nav-link dropdown-toggle text-light" href="/" data-bs-toggle="dropdown">
+								<i class="uil uil-home"></i> 
+								Accueil</a>
+							<ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+								<!--/.mega-menu-content-->
+							</ul>
+							<!--/.dropdown-menu -->
+						</li>
+						<li class="nav-item dropdown dropdown-mega">
+							<a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">
+								<i class="uil uil-right-indent-alt"></i> 
+								Liste des administrations							</a>
+							<ul class="dropdown-menu mega-menu mega-menu mega-menu-img">
+								<li class="mega-menu-content mega-menu">
+									<ul class="row row-cols-1 row-cols-lg-2 gx-0 gx-lg-6 gy-lg-2 list-unstyled">
+										<li class="col mb-1 mb-lg-auto" onclick="window.location='/service?adm=MINDCAF'">
+                            <div class="rounded card card-border-start bg-soft-ash border-danger mb-1">
+                                <a class="d-flex flex-col flex-wrap p-0" data-bs-toggle="tab" href="#">
+                                    <div class="m-0 d-none d-lg-block">
+										<figure class="lift rounded overlay overlay-3 overlay-gradient-7">
+											<img src="./assets/img/menu/mindcaf.png" srcset="./assets/img/menu/mindcaf.png 1x" class="w-100 border text-yellow me-4" alt="" />
+											<span class="bg"></span>
+											<figcaption>
+												<h5 class="from-left mb-1 text-danger">MINDCAF</h5>
+												<p class="from-left mb-0 text-info">Ministère des Domaines, du Cadastre et des Affaires foncières</p>
+											</figcaption>
+										</figure>
+                                    </div>
+                                </a>
+                            </div> 
+                        </li><li class="col mb-1 mb-lg-auto" onclick="window.location='/service?adm=MINEE'">
+                            <div class="rounded card card-border-start bg-soft-ash border-danger mb-1">
+                                <a class="d-flex flex-col flex-wrap p-0" data-bs-toggle="tab" href="#">
+                                    <div class="m-0 d-none d-lg-block">
+										<figure class="lift rounded overlay overlay-3 overlay-gradient-7">
+											<img src="./assets/img/menu/minee.png" srcset="./assets/img/menu/minee.png 1x" class="w-100 border text-yellow me-4" alt="" />
+											<span class="bg"></span>
+											<figcaption>
+												<h5 class="from-left mb-1 text-danger">MINEE</h5>
+												<p class="from-left mb-0 text-info">Ministère de l’Eau et de l’Energie</p>
+											</figcaption>
+										</figure>
+                                    </div>
+                                </a>
+                            </div> 
+                        </li><li class="col mb-1 mb-lg-auto" onclick="window.location='/service?adm=MINEFOP'">
+                            <div class="rounded card card-border-start bg-soft-ash border-danger mb-1">
+                                <a class="d-flex flex-col flex-wrap p-0" data-bs-toggle="tab" href="#">
+                                    <div class="m-0 d-none d-lg-block">
+										<figure class="lift rounded overlay overlay-3 overlay-gradient-7">
+											<img src="./assets/img/menu/minefop.png" srcset="./assets/img/menu/minefop.png 1x" class="w-100 border text-yellow me-4" alt="" />
+											<span class="bg"></span>
+											<figcaption>
+												<h5 class="from-left mb-1 text-danger">MINEFOP</h5>
+												<p class="from-left mb-0 text-info">Ministère de l’Emploi et de la Formation professionnelle</p>
+											</figcaption>
+										</figure>
+                                    </div>
+                                </a>
+                            </div> 
+                        </li><li class="col mb-1 mb-lg-auto" onclick="window.location='/service?adm=MINFOPRA'">
+                            <div class="rounded card card-border-start bg-soft-ash border-danger mb-1">
+                                <a class="d-flex flex-col flex-wrap p-0" data-bs-toggle="tab" href="#">
+                                    <div class="m-0 d-none d-lg-block">
+										<figure class="lift rounded overlay overlay-3 overlay-gradient-7">
+											<img src="./assets/img/menu/minfopra.png" srcset="./assets/img/menu/minfopra.png 1x" class="w-100 border text-yellow me-4" alt="" />
+											<span class="bg"></span>
+											<figcaption>
+												<h5 class="from-left mb-1 text-danger">MINFOPRA</h5>
+												<p class="from-left mb-0 text-info">Ministère de la Fonction publique et de la Réforme administrative</p>
+											</figcaption>
+										</figure>
+                                    </div>
+                                </a>
+                            </div> 
+                        </li><li class="col mb-1 mb-lg-auto" onclick="window.location='/service?adm=MINMIDT'">
+                            <div class="rounded card card-border-start bg-soft-ash border-danger mb-1">
+                                <a class="d-flex flex-col flex-wrap p-0" data-bs-toggle="tab" href="#">
+                                    <div class="m-0 d-none d-lg-block">
+										<figure class="lift rounded overlay overlay-3 overlay-gradient-7">
+											<img src="./assets/img/menu/minmidt.png" srcset="./assets/img/menu/minmidt.png 1x" class="w-100 border text-yellow me-4" alt="" />
+											<span class="bg"></span>
+											<figcaption>
+												<h5 class="from-left mb-1 text-danger">MINMIDT</h5>
+												<p class="from-left mb-0 text-info">Ministère des Mines, de l’Industrie et du Développement technologi</p>
+											</figcaption>
+										</figure>
+                                    </div>
+                                </a>
+                            </div> 
+                        </li><li class="col mb-1 mb-lg-auto" onclick="window.location='/service?adm=MINREX'">
+                            <div class="rounded card card-border-start bg-soft-ash border-danger mb-1">
+                                <a class="d-flex flex-col flex-wrap p-0" data-bs-toggle="tab" href="#">
+                                    <div class="m-0 d-none d-lg-block">
+										<figure class="lift rounded overlay overlay-3 overlay-gradient-7">
+											<img src="./assets/img/menu/minrex.png" srcset="./assets/img/menu/minrex.png 1x" class="w-100 border text-yellow me-4" alt="" />
+											<span class="bg"></span>
+											<figcaption>
+												<h5 class="from-left mb-1 text-danger">MINREX</h5>
+												<p class="from-left mb-0 text-info">Ministère des Relations extérieures</p>
+											</figcaption>
+										</figure>
+                                    </div>
+                                </a>
+                            </div> 
+                        </li><li class="col mb-1 mb-lg-auto" onclick="window.location='/service?adm=MINT'">
+                            <div class="rounded card card-border-start bg-soft-ash border-danger mb-1">
+                                <a class="d-flex flex-col flex-wrap p-0" data-bs-toggle="tab" href="#">
+                                    <div class="m-0 d-none d-lg-block">
+										<figure class="lift rounded overlay overlay-3 overlay-gradient-7">
+											<img src="./assets/img/menu/mint.png" srcset="./assets/img/menu/mint.png 1x" class="w-100 border text-yellow me-4" alt="" />
+											<span class="bg"></span>
+											<figcaption>
+												<h5 class="from-left mb-1 text-danger">MINT</h5>
+												<p class="from-left mb-0 text-info">Ministère des Transports</p>
+											</figcaption>
+										</figure>
+                                    </div>
+                                </a>
+                            </div> 
+                        </li><li class="col mb-1 mb-lg-auto" onclick="window.location='/service?adm=MINTP'">
+                            <div class="rounded card card-border-start bg-soft-ash border-danger mb-1">
+                                <a class="d-flex flex-col flex-wrap p-0" data-bs-toggle="tab" href="#">
+                                    <div class="m-0 d-none d-lg-block">
+										<figure class="lift rounded overlay overlay-3 overlay-gradient-7">
+											<img src="./assets/img/menu/mintp.png" srcset="./assets/img/menu/mintp.png 1x" class="w-100 border text-yellow me-4" alt="" />
+											<span class="bg"></span>
+											<figcaption>
+												<h5 class="from-left mb-1 text-danger">MINTP</h5>
+												<p class="from-left mb-0 text-info">Ministère des Travaux publics</p>
+											</figcaption>
+										</figure>
+                                    </div>
+                                </a>
+                            </div> 
+                        </li><li class="col mb-1 mb-lg-auto" onclick="window.location='/administration'">
+                            <div class="rounded card card-border-start bg-soft-ash border-danger">
+                                <a class="d-flex flex-col flex-wrap p-2" data-bs-toggle="tab" href="#">
+                                    <div class="text-wrap d-none d-lg-block">
+                                    <h4 class="mb-1">Plus d'administration ...</h4>
+                                        <p class="mb-0 text-ash">
+                                      Plus d'administration ...
+                                        </p> 
+                                    </div>
+                                </a>
+                            </div>
+                        </li>									</ul>
+								</li>
+								<!--/.mega-menu-content-->
+							</ul>
+							<!--/.dropdown-menu -->
+						</li>
+						<li class="nav-item dropdown dropdown-mega">
+							<a class="nav-link dropdown-toggle text-light" href="./search" data-bs-toggle="dropdown">
+								<i class="uil uil-browser"></i> 
+								Suivi Dossier							</a>
+							<ul class="dropdown-menu mega-menu mega-menu-dark mega-menu-img">
+								<!--/.mega-menu-content-->
+							</ul>
+							<!--/.dropdown-menu -->
+						</li>
+						
+												
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">
+								<i class="uil uil-comment-question"></i> 
+								Aide et Contact							</a>
+
+							<div class="dropdown-menu dropdown-lg">
+								<div class="dropdown-lg-content">
+									<div>
+										<h6 class="dropdown-header">Nous Connaître</h6>
+										<ul class="list-unstyled">
+											<li><a class="dropdown-item" href="#">Présentation de la DGB</a></li>
+											<li><a class="dropdown-item" href="#">Guide utilisateur - Usagers</a></li>
+											<li><a class="dropdown-item" href="#">Aide sur le site</a></li>
+											<li><a class="dropdown-item" href="#">Foire Aux Questions</a></li>
+											<li><a class="dropdown-item" href="#">Découvrez le paiement de proximité</a></li>
+
+										</ul>
+									</div>
+									<!-- /.column -->
+									<div>
+										<h6 class="dropdown-header">Confidentialité et Sécurité</h6>
+										<ul class="list-unstyled">
+											<li><a class="dropdown-item" href="#">Conditions d'Utilisation</a></li>
+											<li><a class="dropdown-item" href="#">Politique de Confidentialité</a></li>
+											<li><a class="dropdown-item" href="#">Gestion des Cookies</a></li>
+											<li><a class="dropdown-item" href="#">Mentions légales</a></li>
+											<li><a class="dropdown-item" href="#">Contact</a></li>
+										</ul>
+									</div>
+									<!-- /.column -->
+								</div>
+								<!-- /auto-column -->
+							</div>
+							
+						</li>
+					</ul>
+					<!-- /.navbar-nav -->
+					<div class="offcanvas-footer d-lg-none">
+						<div>
+							<a href="mailto:first.last@email.com" class="link-inverse">contact@servicespublics.cm</a>
+							<br/> Tel: (+237) 222 22 49 53
+							<br/> Fax: (+237) 222 22 08 58 <br/>
+							<nav class="nav social social-white mt-4">
+								<a href="#"><i class="uil uil-twitter"></i></a>
+								<a href="#"><i class="uil uil-facebook-f"></i></a>
+								<a href="#"><i class="uil uil-dribbble"></i></a>
+								<a href="#"><i class="uil uil-instagram"></i></a>
+								<a href="#"><i class="uil uil-youtube"></i></a>
+							</nav>
+							<!-- /.social -->
+						</div>
+					</div>
+					<!-- /.offcanvas-footer -->
+				</div>
+				<!-- /.offcanvas-body -->
+			</div>
+			<!-- /.navbar-collapse -->
+			<div class="navbar-other w-100 d-flex ms-auto">
+				<ul class="navbar-nav flex-row align-items-center ms-auto">
+					<li class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search"><i class="uil uil-search text-light"></i></a></li>
+				
+					<li class="nav-item dropdown language-select text-uppercase">
+						<a class="nav-link dropdown-item dropdown-toggle d-flex align-items-center text-light" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="d-none d-lg-block uil uil-globe currentLang"></i>FR</a>
+						<ul class="dropdown-menu">
+							<li class="nav-item">
+								<a class="dropdown-item" href="/?lang=EN">En</a>
+							</li>
+							<li class="nav-item">
+								<a class="dropdown-item" href="/?lang=FR">Fr</a>
+							</li>
+						</ul>
+					</li>
+					&nbsp;&nbsp;
+					<span class="avatar bg-soft-green text-green ml-4">
+					<li class="nav-item dropdown language-select text-uppercase">
+							<a class="nav-link dropdown-item d-flex align-items-center text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="d-none d-lg-block uil uil-user-times h3"></i></a>
+							<ul class="dropdown-menu h6">
+								<li class="nav-item">
+									<a class="dropdown-item fs-16" href="signin?conType=2"><i class="uil uil-signin me-1 text-danger"></i> Connexion</a>
+								</li>
+							</ul>
+						</li>				</span>
+					<li class="nav-item d-lg-none">
+						<button class="hamburger offcanvas-nav-btn">
+							<span></span>
+						</button>
+					</li>
+				</ul>
+				<!-- /.navbar-nav -->
+			</div>
+			<!-- /.navbar-other -->
+		</div>
+		<!-- /.container -->
+	</nav>
+</header>
+
+<!-- /.offcanvas -->
+<div class="offcanvas offcanvas-top bg-light" id="offcanvas-search" data-bs-scroll="true">
+<div class="container d-flex flex-row py-6">
+  <form class="search-form w-100" method="GET" action="./download">
+	<input id="code" name="code" type="text" class="form-control" placeholder="T&eacute;l&eacute;chargement">
+  </form>
+  <!-- /.search-form -->
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<!-- /.container -->
+</div>
+<!-- /.offcanvas -->
+
+
+
+<style>
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.tip {
+    font-size: 20px;
+    margin: 40px auto 50px;
+    text-align: center;
+}
+
+.cont {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    width: 900px;
+    height: 650px;
+    margin: 0 auto 100px;
+    background: #fff;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(49, 111, 7, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(49, 111, 7, 0.15);
+}
+
+.form {
+    position: relative;
+    width: 640px;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+    padding: 50px 30px 0;
+}
+
+.sub-cont {
+    overflow: hidden;
+    position: absolute;
+    left: 640px;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    padding-left: 260px;
+    background: #fff;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.cont.s--signup .sub-cont {
+    -webkit-transform: translate3d(-640px, 0, 0);
+    transform: translate3d(-640px, 0, 0);
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 36px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.img {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    padding-top: 360px;
+}
+
+.img:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    background-image: url("ext.jpg");
+    opacity: .8;
+    background-size: cover;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #45C4A0;
+}
+
+.cont.s--signup .img:before {
+    -webkit-transform: translate3d(640px, 0, 0);
+    transform: translate3d(640px, 0, 0);
+}
+
+.img__text {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: -webkit-transform 1.2s ease-in-out;
+    transition: -webkit-transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out;
+    transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.img__text h2 {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.img__text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cont.s--signup .img__text.m--up {
+    -webkit-transform: translateX(520px);
+    transform: translateX(520px);
+}
+
+.img__text.m--in {
+    -webkit-transform: translateX(-520px);
+    transform: translateX(-520px);
+}
+
+.cont.s--signup .img__text.m--in {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.img__btn {
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    width: 165px;
+    height: 40px;
+    margin: 0 auto;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.img__btn:after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+.img__btn span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 1.2s;
+    transition: -webkit-transform 1.2s;
+    transition: transform 1.2s;
+    transition: transform 1.2s, -webkit-transform 1.2s;
+}
+
+.img__btn span.m--in {
+    -webkit-transform: translateY(-72px);
+    transform: translateY(-72px);
+}
+
+.cont.s--signup .img__btn span.m--in {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.cont.s--signup .img__btn span.m--up {
+    -webkit-transform: translateY(72px);
+    transform: translateY(72px);
+}
+
+h2 {
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    width: 260px;
+    margin: 25px auto 0;
+    text-align: center;
+}
+
+label span {
+    font-size: 12px;
+    color: #cfcfcf;
+    text-transform: uppercase;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.forgot-pass {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #cfcfcf;
+}
+
+.submit {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background: #45C4A0;
+    text-transform: uppercase;
+}
+
+.fb-btn {
+    border: 2px solid #d3dae9;
+    color: #8fa1c7;
+}
+
+.fb-btn span {
+    font-weight: bold;
+    color: #455a81;
+}
+
+.sign-in {
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.cont.s--signup .sign-in {
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 1.2s;
+    transition-duration: 1.2s;
+    -webkit-transform: translate3d(640px, 0, 0);
+    transform: translate3d(640px, 0, 0);
+}
+
+.sign-up {
+    -webkit-transform: translate3d(-900px, 0, 0);
+    transform: translate3d(-900px, 0, 0);
+}
+
+.cont.s--signup .sign-up {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+</style>
+
+    <section class="wrapper bgHome2">
+        <div class="container py-14 py-md-16">
+            <!-- /.nav-tabs -->
+            <div class="container-xl tab-content text-center mt-0 mb-md-2">
+						<div class="row m-0 p-0">
+							<div class="col-12 m-0 p-0">	
+								<div class="cont">
+									<div class="form sign-in">
+										<div class="p-3 p-md-11 p-lg-13">
+											<div class="h1 text-center text-red mb-6 text-start">Bienvenue</div>
+											<form class="text-start mb-3" action="" autocomplete="off" id="signInForm" name="signInForm">
+												<div class="form-floating mb-4 p-md-1">
+													<input type="text" class="form-control text-center" id="userCode" name="userCode" placeholder="N° Contribuable" required>
+													<label class="control-label" for="userCode">NIU</label>
+													<input type="hidden" name="conType" value="1"/>
+												</div>
+												<div class="form-floating password-field mb-4 p-md-1">
+													<input type="password" class="form-control text-center" id="password" name="userPwd" placeholder="Mot de passe" required>
+													<label class="control-label" for="userPwd">Mot de passe</label>
+													<span class="password-toggle"><i class="uil uil-eye"></i></span>
+													
+												</div>
+												<button id="signinBtn" class="btn btn-warning auth rounded-pill btn-login text-white w-100 mb-2 mx-2">CONNEXION</button>
+											</form>
+											<!-- /form -->
+											<div class="row mb-1">
+												<div class="col-md-6">
+													<span class="text-start">
+														<a href="#" onclick="$('#modal-forgotPwd').modal('show');" class="hover text-violet">Mot de passe oubli&eacute; ?</a> 
+													</span>
+												</div>
+												<div class="col-md-6">
+													<span class="text-end"><a href="https://fiscalis.dgi.cm/modules/immatriculation/Consultation/listecontribuable.aspx" class="hover text-violet">NIU oubli&eacute; ?</a> </span>
+												</div>
+											</div>
+										</div>
+									 
+									</div>
+									<div class="sub-cont">
+										<div class="img">
+											<div class="img__text m--up">                 
+												<div class="h3 text-white p-0 p-md-0 mt-4 mb-5">Nouveau sur la plateforme ?</div>
+												<h5 class="text-white p-1 p-md-2 mt-5">Inscrivez-vous !</h5>
+											</div>
+											<div class="img__text m--in">                
+												<div class="h3 text-white p-0 p-md-0 mt-4 mb-5">Vous avez déjà un compte ?</div>
+												<h5 class="text-white p-1 p-md-2 mt-5">Connectez-vous !</h5>
+											</div>
+											<div class="img__btn">
+												<span class="m--up">S'ENREGISTRER</span>
+												<span class="m--in">Connectez-vous !</span>
+											</div>
+										</div>
+										
+										
+										
+										
+										
+										<div class="form sign-up">
+											
+											<div class="h2 text-danger mb-3 text-start mt-0 font-weight-bold">Cr&eacute;ez votre espace particulier</div>
+												<form class="text-start mb-0 row" action="" autocomplete="off" id="signUpForm" name="signUpForm">
+												
+													<div class="form-floating mb-0 col-md-6 p-md-1">
+														<input type="hidden" name="conType" value="1"/>
+														<input type="hidden" name="haveNIU" id="haveNIU" value="0">
+														<input type="text" onchange="if(this.value=='' || this.value.length<8){cleanForm('signUpForm')}else{showLoadder(0);xajax_bkSearchContribuable(1,this.value);}" class="form-control mt-0" placeholder=" " id="niu" name="niu" required>
+														<label class="control-label mt-0" for="niu">NIU</label>
+													</div>
+													
+													<div class="form-floating  mb-0 col-md-6 p-md-1">
+														<select class="form-control form-select mt-0" id="idType" name="idType" required placeholder=" ">
+																															<option value="1">Ancienne CNI</option>
+																																<option value="2">Nouvelle CNI</option>
+																																<option value="3">R&eacute;c&eacute;piss&eacute; CNI</option>
+																																<option value="4">Passeport</option>
+																																<option value="5">Permis de conduire</option>
+																																<option value="6">Pi&egrave;ce scolaire</option>
+																																<option value="7">Carte profesionnelle</option>
+																																<option value="8">Certificat de perte</option>
+																																<option value="9">Autre</option>
+																														</select>
+														<label class="control-label mt-0" for="idType">Type d'identification</label>
+													</div>
+													
+													<div class="form-floating mb-0 p-md-1 mb-0 col-md-6">
+														<input type="text" class="form-control mt-0" id="idCode" name="idCode" required placeholder=" ">
+														<label class="control-label mt-0" for="idCode">Num&eacute;ro d'identification</label>
+													</div>
+													<div class="form-floating p-md-1 mb-0 col-md-6">
+														<input type="text" class="form-control mt-0" id="lastName" name="lastName"required placeholder=" ">
+														<label class="control-label mt-0" for="lastName">Noms</label>
+													</div>
+													<div class="form-floating p-md-1 mb-0 col-md-6">
+														<input type="text" class="form-control mt-0" id="firstName" name="firstName" required placeholder=" ">
+														<label class="control-label mt-0" for="firstName">Pr&eacute;noms</label>
+													</div>
+													<div class="form-floating p-md-1 mb-0 col-md-6">
+														<input type="tel" class="form-control mt-0" id="phoneNumber" name="phoneNumber" required placeholder=" ">
+														<label class="control-label mt-0" for="phoneNumber">T&eacute;l&eacute;phone</label>
+													</div>
+
+													<div class="form-floating p-md-1 mb-0 col-md-6">
+														<input id="email" name="email" type="text" value="" class="form-control m-0 fldFont clsPsg clsPgF clsPRdO" data-validation="email" data-validation-optional="true" data-mask="" data-inputmask-alias="email" im-insert="true" placeholder="E-mail">
+														<label class="control-label mt-0" for="email">E-mail</label>
+													</div>
+
+													<div class="form-floating p-md-1 mb-0 col-md-6">
+														<select class="form-control mt-0" id="civilityCode" name="civilityCode" required placeholder="Genre">
+															  <option selected value="MR">Homme</option>
+															  <option value="MME">Femme</option>
+														</select>
+														<label class="control-label mt-0" for="civilityCode">Genre</label>
+													</div>
+													<div class="form-floating p-md-1 mb-0 col-md-6">
+														<input id="bdt" name="bdt" type="text" value="" class="form-control m-0 fldFont clsPsg clsPgF clsPRdO birthDateMask js-daterangepicker" data-validation="date" data-validation-format="dd/mm/yyyy" data-validation-optional="true" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask="" placeholder="dd/mm/yyyy" im-insert="false">
+														<label class="control-label mt-0" for="bdt">N&eacute; le</label>
+													</div>
+													
+													<div class="form-check form-switch mb-0 col-md-6 mx-2 mx-md-0 text-center">
+														<input class="form-check-input" required type="checkbox" value="" id="condTem" name="condTem" style="width:3em;">
+														<br />
+														<label class="control-label mt-0" class="form-check-label  text-violet fs-15" for="condTem"> Acceptez les termes et conditions </label>
+													</div>
+													
+													<div class="form-check mb-0 col-md-12 mx-2 mx-md-0 mt-4 ">
+														<button id="sigupBtn" type="submit" data-bs-toggle="modal" data-bs-target="#modal-signup"
+															class="btn btn-orange auth rounded-pill btn-login text-white w-100 mb-2 mx-2">Enregistrer													</button>
+													</div>
+													
+												</form>
+												<!-- /form -->
+												<div class="row mb-3">
+													<div class="col-md-12 text-center">
+														<span class="text-end"><a href="https://teledeclaration-dgi.cm/modules/Common/Account/eregistration.aspx?er=empty" class="hover mb-5 text-violet">Vous n'avez pas d'NIU ?</a> </span>
+													</div>
+												</div>
+											
+										</div>
+									</div>
+								</div>
+								
+								
+								
+							</div>
+						</div>
+						
+
+            </div>
+            <!-- /.tab-content -->
+        </div>
+    </section>
+</div>
+
+    <footer class="bg-dark text-inverse">
+        <div class="container pt-13 pt-md-15 pb-1">
+            <div class="row gy-4 gy-lg-0">
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget">
+                        <h4 class="mb-3 text-white">Informations</h4>
+                        <hr class="mt-0 mt-md-5 mb-3"/>
+                        <ul class="list-unstyled text-reset mb-0">
+                            <li><a href="#">Aide sur le site</a></li>
+                            <li><a href="#">Conditions d'Utilisation</a></li>
+                            <li><a href="#">Politique de Confidentialité</a></li>
+                            <li><a href="#">Gestion des Cookies</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.widget -->
+                </div>
+                <!-- /column -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title text-white mb-3">Rubrique du site</h4>
+                        <hr class="mt-0 mt-md-5 mb-3"/>
+                        <ul class="list-unstyled text-reset mb-0">
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Simulateur en ligne</a></li>
+                            <li><a href="#">Procédures en ligne</a></li>
+                            <li><a href="#">Formulaires administratifs</a></li>
+                            <li><a href="#">Découvrez le paiement de proximité</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.widget -->
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="widget">
+                        <h4 class="widget-title text-white mb-3">A Propos</h4>
+                        <hr class="mt-0 mt-md-5 mb-3"/>
+                        Services Publics                        <address>
+                            Yaoundé
+                        </address>
+                        <a href="mailto:first.last@email.com">info@servicespublics.cm</a><br/>
+                        6 2x xx xx xx
+                    </div>
+                    <!-- /.widget -->
+                </div>
+                <!-- /column -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="widget">
+                        <div class="column-container">
+                            <div class="column">
+                                <a href="https://dgtcfm.cm/">
+                                    <h4 class="widget-title text-white mb-3">Contact</h4>
+                                </a>
+                                <hr class="mt-0 mt-md-5 mb-3"/>
+                                Ministère des Finances - Direction Générale du Budget
+                                <br/> Tel: (+237) 222 22 49 53
+                                <br/>Fax: (+237) 222 22 08 58 <br/>
+                                E-mail: contact@servicespublics.cm
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.widget -->
+                </div>
+                <!-- /column -->
+
+                <!-- /column -->
+            </div>
+            <!--/.row -->
+            <hr class="mt-5 mt-md-5 mb-2"/>
+            <div class="d-md-flex align-items-center justify-content-center">
+                <!-- <p class="mb-2 mb-lg-0">© 2023 ADWA SARL. All rights reserved.</p> -->
+                <p class="mb-0">
+					© 2023 - Services Publics - Plateforme de Dématérialisation et de Sécurisation des Recettes Non-Fiscales.
+				</p>
+            </div>
+
+        </div>
+        <!-- /.social -->
+        </div>
+        <!-- /div -->
+        </div>
+        <!-- /.container -->
+    </footer>
+      
+
+
+<!--OTP SIGN In -->
+<div class="modal fade" id="modal-signin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content ">
+            <div class="modal-body">
+                <button type="button" class="btn-close text-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h2 class="mb-3 text-start">Entrez le code reçu</h2>
+                <form class="text-start mb-3">
+                    <div class="form-floating mb-2 p-md-1">
+                        <input type="text" class="form-control form-control-sm" id="otp" name="otp-signin">
+                        <label for="otp-signin">Code de v&eacute;rification</label>
+                    </div>
+                    <button type="submit"
+                            class="btn btn-primary rounded-pill btn-login w-100 mb-2 Btn-next">V&eacute;rifier</button>
+                </form>
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+<!--/.modal -->
+
+<!--OTP SIGN up -->
+<div class="modal fade" id="modal-signup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn-close text-end" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h2 class="mb-3 text-start">Entrez le code reçu</h2>
+                <form class="text-start mb-3">
+                    <div class="form-floating mb-2 p-md-1">
+                        <input type="text" class="form-control form-control-sm" id="otp" name="otp-signin">
+                        <label for="otp-signin">Code de v&eacute;rification</label>
+                    </div>
+                    <button type="submit"
+                            class="btn btn-primary rounded-pill btn-login w-100 mb-2 btn-next">V&eacute;rifier</button>
+                </form>
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+<!--/.modal -->
+
+<!--Recovery accounnt -->
+<div class="modal fade" id="modal-forgotPwd" tabindex="-1" id="forgotPwdModal">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content text-center">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card-body  text-center">
+                            <form id="forgotPwdForm" name="forgotPwdForm" action="#!" class="">
+                                <ul class="nav nav-tabs nav-tabs-basic nav-justified text-center d-flex flex-row">
+                                    <li class="nav-item text-center"><a class="nav-link active" data-bs-toggle="tab"
+                                                                        href="#tab-1" id="tab1">Informations</a>
+                                    </li>
+                                    <li class="nav-item text-center"><a class="nav-link disabled" data-bs-toggle="tab"
+                                                                        href="#tab-2" id="tab2">Fin</a></li>
+                                </ul>
+                                <div class="tab-content mt-0 mt-md-5">
+                                    <div class="tab-pane fade show active" id="tab-1">
+                                        <p class="text-center mb-2">Remplissez vos informations</p>
+                                        <div class="form-floating mb-2 p-md-1">
+                                            <input type="text" class="form-control form-control-sm" id="niu" name="niu"
+                                                   onchange="if(this.value=='' || this.value.length<8){cleanForm('forgotPwdForm')}else{showLoadder(0);xajax_bkSearchContribuable(1,this.value);}"
+                                                   required/>
+                                            <label for="nui">NIU</label>
+                                        </div>
+                                        <div class="form-floating mb-2 p-md-1">
+                                            <input type="number" class="form-control form-control-sm" id="phone"
+                                                   name="phone" required/>
+                                            <label for="phone">T&eacute;l&eacute;phone</label>
+                                        </div>
+                                        <div class="form-floating mb-2 p-md-1">
+                                            <input type="email" class="form-control form-control-sm" id="email"
+                                                   name="email" required/>
+                                            <label for="mail">E-mail</label>
+                                        </div>
+                                        <button type="submit" onclick="test()"
+                                                class="btn btn-green col-12 rounded ">Valider</button>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab-2">
+                                        <p class="text-center"><i
+                                                    class="uil uil-envelope rounded-circle  text-green h1 p-0 bg-soft-green "></i>
+                                        </p>
+                                        <p class="text-center mb-5">Mot de passe oubli&eacute; ?                                        <h5 id="txt"></h5>
+                                        </p>
+
+                                        <div class="form-floating password-field mb-2 p-md-1">
+                                            <input type="newPwd" class="form-control" id="newPwd" name="newPwd"
+                                                   required>
+                                            <span class="password-toggle"><i class="uil uil-eye"></i></span>
+                                            <label for="newPwd">Nouveau mot de passe</label>
+                                        </div>
+                                        <div class="form-floating password-field mb-2 p-md-1">
+                                            <input type="cfmPwd" class="form-control" id="cfmPwd" name="cfmPwd"
+                                                   required>
+                                            <span class="password-toggle"><i class="uil uil-eye"></i></span>
+                                            <label for="cfmPwd">Confirmation du mot de passe</label>
+
+                                        </div>
+                                        <button type="submit" id="nextBtn" onclick="forgtpwd()"
+                                                class="btn btn-green col-12 rounded btn-next">Valider</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!--/.card-body -->
+                        </div>
+                        <!--/.card -->
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+<!--/.modal -->
+
+
+<!--/.Ajout de PJ -->
+<div class="modal fade" id="modal-pj" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content text-center">
+
+            <div class="modal-header p-3  text-light bg-success">
+                <span class=""><strong class="" id="">Pièces Jointes</strong></span>
+            </div>
+            <div class="modal-body">
+                <form class="text-start mb-5">
+                    <div class="form-floating mb-5 col-12">
+                        <button class="btn btn-primary text-center" type="button" id="addPjBtn">Veuillez sélectionner votre document                            <i class="fas fa-cloud-upload-alt text-center w-100 mb-2 text-sky" id=""
+                               style="font-size: 50px;cursor: pointer"></i>
+                        </button>
+                    </div>
+
+                    <div class="mb-4 text-center h4">Ajoutez votre commentaire</div>
+
+                    <div class="form-floating mb-3 col-12 text-center">
+                        <input type="text" class="form-control" placeholder="Commentaire" id="comment">
+                        <label for="comment">Commentaire</label>
+                    </div>
+                    <div class="form-floating mb-3 col-12 text-center">
+                        <div class="progress d-none" id="progressPj">
+                            <div class="progress-bar  bg-danger" id="pgs" role="progressbar"
+                                 aria-label="Example with label" style="width: 1%;" aria-valuenow="1" aria-valuemin="0"
+                                 aria-valuemax="100">1%
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+
+<!--/.Ajout de PJ -->
+<div class="modal fade" id="modal-cartPay" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content text-center">
+            <div class="modal-body">
+                <h4 class="mb-3 text-start">Authentification du paiement</h4>
+                <p id="text-card-information" class="lead mb-6 text-start">Merci de renseigner la code d'autorisation
+                    reçu par @first xxx xxx xx@last</p>
+                <form class="text-start mb-3">
+                    <div class="form-floating mb-2">
+                        <input type="email" class="form-control" placeholder="Email" id="loginEmail">
+                        <label for="loginEmail">Code</label>
+                    </div>
+                    <a id="confirm-payment" class="btn btn-green text-white rounded btn-login w-100 mb-2">Confirmer le
+                        paiement</a>
+                </form>
+                <p class="mb-1 text-dark"><a id="resend-code" href="#" class="text-ash hover">Resend code</a></p>
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+
+
+<!--/. Rejet de bulletin -->
+<div class="modal fade" id="modal-reject" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content text-center">
+            <div class="modal-header p-3  text-light bg-pink">
+                <span class=""><strong class="" id="">Confirmation de rejet</strong></span>
+            </div>
+            <div class="modal-body">
+                <h4 class="mb-3 text-start">Dossier N ° <strong class="text-orange" id="rejectTitle"></strong></h4>
+                <p id="text-card-information" class="lead mb-6 text-start">Merci de renseigner vos motif et
+                    observations</p>
+                <form class="text-start mb-3" id="rejectform">
+                    <div class="col-12 form-group label-floating">
+                        <div class="form-floating">
+                            <select class="form-control m-0 fldFont clsPsg clsPgF clsCivi clsPRdO form-select"
+                                    id="rejetMotif" name="rejetMotif" required="">
+                                <option disabled value=""></option>
+                                <option value="C">Complément information</option>
+                                <option value="J">Complément PJ</option>
+                                <option value="Z">Autres</option>
+                            </select>
+                            <label class="control-label">Motif (*)</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-3 form-group label-floating">
+                        <div class="form-floating">
+                            <input id="rejetComm" name="rejetComm" type="text" value=""
+                                   class="form-control m-0 fldFont clsFina" placeholder="Observations">
+                            <label for="rejetComm">Observations</label>
+                        </div>
+                    </div>
+
+                    <a id="confirm-payment"
+                       onclick="xajax_doReject(xajax.getFormValues('bulletinForm') ,$('#rejetMotif').val(),$('#rejetComm').val())"
+                       class="btn btn-green rounded btn-login w-100 mb-2 mt-3 text-white">Valider</a>
+                </form>
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+
+
+<!--/. Rejet de bulletin -->
+<div class="modal fade" id="modal-certif" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content text-center">
+            <div class="modal-header p-3  text-light bg-green">
+                <span class=""><strong class="" id="certifTitle">Confirmation de </strong></span>
+            </div>
+            <div class="modal-body text-center">
+                <p id="text-card-information" class="lead mb-6 text-center">
+                    <strong id="">Pour confirmer, saisisez votre certificatt et sa clé de sécurité</strong>
+                </p>
+                <form class="text-start mb-3" id="certifForm" name="certifForm">
+                    <div class="row">
+                        <div class="form-floating col-12 password-field mb-2 p-md-1" id="pwd">
+                            <div class="form-floating">
+                                <input id="certifPwd" name="certifPwd" type="password" value=""
+                                       class="form-control m-0 fldFont clsFina" placeholder="Mot de passe">
+                                <label for="certifPwd">Mot de passe                                    <span class="password-toggle"><i class="uil uil-eye"></i></span>
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+                            <button type="button" onclick="openFileDialog()"
+                                    class="btn btn-orange">Veuillez sélectionner votre certificat &nbsp; &nbsp;<i
+                                        class="uil uil-padlock"></i></i></button>
+                            <input type="file" hidden name="certifInput" id="certifInput"
+                                   onchange="$('#fileName').text(getFileNameCertif(this.value))">
+                        </div>
+
+
+                        <div class="col-6 d-none col-6 mt-4  text-center" id="cancelCertifBtn">
+                            <button type="button"
+                                    onclick="$('#modal-certif').modal('hide');$('#modal-certif input').val(''); "
+                                    class="btn btn-danger text-white">Annuler</button>
+                        </div>
+
+                        <div class="col-6 d-none col-6 mt-4  text-center" id="certifValBtn">
+                            <button type="button"
+                                    onclick="confirmCertif()"
+                                    class="btn btn-primary text-white">Valider</button>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <strong><h5 id="fileName" class="text-dark"></h5></strong>
+                    </div>
+                    <div class="row mt-3 progress-list w-100 d-none myProgress" id="myProgress"
+                         style="background: gainsboro">
+                        <div id="myBar" class="bg-success col-11 myBar"
+                             style="width: 1%;height:10px;background-color: green;border-radius: 3px"></div>
+                        <span id="percent" class="bg-white">1%</span>
+                    </div>
+                </form>
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+
+
+<div class="modal fade" id="modal-pay" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl p-0">
+        <div class="modal-content text-center p-0">
+            <div class="modal-body p-0">
+                <div class="wrapper mt-2 content-wrapper col-lg-10 mx-auto mb-0">
+
+
+                    <!-- /header -->
+                    <form action="#" method="POST" id="payForm" name="payForm" autocomplete="off">
+
+
+                        <section class="section dashboard">
+                            <div class="row flex-lg-row-reverse ">
+
+
+                                <div class="col-lg-4 mt-10 mb-5 my-lg-0">
+
+                                    <div class="card coatBG2 pb-0 fs-15 mb-0" style="height:90%;">
+
+                                        <h5 class="card-header mb-5 p-2 bg-warning">
+                                            <p id="dossierCodeLbl"
+                                               class="h3 text-light font-weight-bold text-center"></p>
+                                        </h5>
+
+                                        <div class="bg-color-overlay2 card-body d-table" style="height:100%;">
+
+                                            
+                                            <div class="d-table-row font-weight-bold fs-17">Prestation : <strong
+                                                        id="servLabl"></strong>
+                                            </div>
+
+                                            <div class="d-table-row font-weight-bold fs-20 text-red text-center">
+                                                <strong>
+                                                    Montant &agrave; payer : Fcfa
+                                                    <span id="amountLbl" class="text-red"></span>
+                                                </strong>
+                                            </div>
+
+                                            <br/>
+
+                                            <div class="d-table-row text-left" id="">Localité : <strong
+                                                        id="descPay"></strong></div>
+
+                                        </div>
+                                        <!--/.card-body -->
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="col-4 rounded d-none" style="margin-bottom:0px" style="height:100%;">
+
+                                    <div class="card coatBG2 pb-0 fs-15 mb-0" style="height:100%;">
+
+                                        <h5 class="card-header mb-5 p-2 bg-pink">
+                                            <p id="adminLibc" class="h3 text-light font-weight-bold text-center">
+                                                Bon à savoir
+                                            </p>
+                                        </h5>
+
+                                        <div class="bg-color-overlay2 card-body d-table" style="height:100%;">
+
+                                            <div class="d-table-row" id="basPart1">
+                                            </div>
+
+                                            <div class="d-table-row text-center font-weight-bold" id="basPart2">
+
+                                            </div>
+
+                                            <div class="d-table-row text-center" id="basPart3">
+
+                                            </div>
+
+                                        </div>
+                                        <!--/.card-body -->
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-8">
+                                    <div class="row">
+
+                                        <div class="col-12 mb-1 divChoosePayment">
+                                            <div class="card info-card sales-card">
+                                                <h5 class="card-header text-light bg-info text-center">Choisir un moyen de paiement                                                    <span></span></h5>
+                                                <div class="card-body p-0">
+
+                                                    <div class="d-flex align-items-justify w100">
+
+                                                        <ul class="nav nav-tabs tabsLi d-flex w-100">
+                                                            <li class="nav-item col-6 tabGreen p-0" role="presentation"
+                                                                onclick="selectPaymentTabsV02(1);" style="">
+                                                                <a class="nav-link px-2 active text-center"
+                                                                   id="mobileMoney-tab"
+                                                                   data-bs-toggle="tab" data-bs-target="#mobileMoney"
+                                                                   type="button"
+                                                                   role="tab" aria-controls="mobileMoney"
+                                                                   aria-selected="true">
+                                                                    <i class="bi bi-cash-stack fs-30 d-none"></i><br/>
+                                                                    <span>Mobile & Espèce</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item tabsLi col-6 tabRed p-0 d-none"
+                                                                role="presentation"
+                                                                onclick="selectPaymentTabsV02(2);" style="">
+                                                                <a class="nav-link px-2 text-center" id="cartBank-tab"
+                                                                   data-bs-toggle="tab"
+                                                                   data-bs-target="#cartBank" type="button" role="tab"
+                                                                   aria-controls="cartBank" aria-selected="false">
+                                                                    <i class="bi bi-credit-card fs-30 d-none"></i><br/>
+                                                                    Carte bancaire                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item tabsLi col-6 tabYellow p-0 d-none"
+                                                                role="presentation"
+                                                                onclick="selectPaymentTabsV02(3);" style="">
+                                                                <a class="nav-link px-2 text-center" id="virement-tab"
+                                                                   data-bs-toggle="tab"
+                                                                   data-bs-target="#virement" type="button" role="tab"
+                                                                   aria-controls="virement" aria-selected="false">
+                                                                    <i class="bi bi-bank fs-30 d-none"></i><br/>
+                                                                    Virement bancaire                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item tabsLi col-6 tabYellow p-0"
+                                                                role="presentation"
+                                                                onclick="selectPaymentTabsV02(3);" style="">
+                                                                <a class="nav-link px-2 text-center" id="virement-tab"
+                                                                   data-bs-toggle="tab"
+                                                                   data-bs-target="#virement" type="button" role="tab"
+                                                                   aria-controls="virement" aria-selected="false">
+                                                                    <i class="bi bi-bank fs-30 d-none"></i><br/>
+                                                                    Virement bancaire                                                                </a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="card recent-sales overflow-auto">
+                                                <div class="col-12 card-header bg-success text-light fs-25 mb-3 text-center">
+                                                    Paiement effectué avec succès
+                                                </div>
+
+                                                <div class="card-body">
+                                                    <div class="tab-content" id="myTabContent">
+
+                                                        <div class="tab-pane fade show tabGlobal" id="divPaymentSuccess"
+                                                             role="tabpanel"
+                                                             aria-labelledby="resultOK-tab">
+                                                            <div class="row">
+
+                                                                <div class="p-0 mb-7 text-dark fs-20 text-center">
+                                                                    Ci-dessous votre reçu de paiement.<br/>Il vous sera
+                                                                    également
+                                                                    envoyé par
+                                                                    SMS et/ou par E-mail.
+                                                                </div>
+
+
+                                                                <div class="col-12  mb-3 btnPrint text-center d-none"
+                                                                     id="">
+															<span id="dwl" class="w-25 h-25 "
+                                                                  onclick="xajax_printFicheRecive()">
+																<img src="./assets/img/pdf.png" class="" alt=""
+                                                                     style="border-radius: 10px!important;cursor: pointer!important;width:15%!important;height: 100%!important;"
+                                                                     width="100px">
+															</span>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="tab-pane fade show tabGlobal tabForm active"
+                                                             id="mobileMoney"
+                                                             role="tabpanel" aria-labelledby="mobileMoney-tab">
+                                                            <div class="row">
+
+
+                                                                <div class="col-12 col-md-6 col-lg-6">
+                                                                    <div class="d-flex flex-column px-md-5 px-4 mb-2">
+                                                                        <span>Montant à payer</span>
+                                                                        <div class="form-floating">
+                                                                            <input class="form-control payAmountCls"
+                                                                                   id="payAmount1" name="payAmount1"
+                                                                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                                   type="number" placeholder=""/>
+                                                                            <!--label for="payer">Montant à payer</label-->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-12 col-md-6 col-lg-6">
+                                                                    <div class="d-flex flex-column px-md-5 px-4 mb-2">
+                                                                        <span>Opérateur</span>
+                                                                        <div class="form-floating">
+                                                                            <select class="form-control form-select text-danger"
+                                                                                    onchange="if(this.value=='CASH'){$('#divPhone').addClass('d-none');$('#divPhone input').removeAttr('required');}else{$('#divPhone').removeClass('d-none');$('#divPhone input').attr('required','required');}"
+                                                                                    id="meannCode" name="meannCode"
+                                                                                    aria-label="Opérateur"
+                                                                                    placeholder="Opérateur">
+                                                                                <option value=""></option
+                                                                                <option value="CAMPOST-MONEY">Campost
+                                                                                    Money
+                                                                                </option>
+                                                                                <option value="ORANGE-MONEY">Orange
+                                                                                    Money
+                                                                                </option>
+                                                                                <option value="MOBILE-MONEY">MTN Mobile
+                                                                                    Money
+                                                                                </option>
+                                                                                <option value="YOOMEE-MONEY">YooMee
+                                                                                    Money
+                                                                                </option>
+                                                                                <option value="EU-MONEY">EU Mobile
+                                                                                    Money
+                                                                                </option>
+                                                                                <option value="SARA-MONEY">Sara Money
+                                                                                </option>
+                                                                                <option value="CASH">Espece</option>
+                                                                            </select>
+                                                                            <!--label for="meannCode">Opérateur</label-->
+                                                                            <input type="hidden" id="typePay"
+                                                                                   name="typePay"
+                                                                                   value="1">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-12" id="divPhone">
+                                                                    <div class="d-flex flex-column px-md-5 px-4 mb-2">
+                                                                        <span>Num&eacute;ro Payeur</span>
+                                                                        <div class="form-floating">
+                                                                            <input class="form-control" id="payer"
+                                                                                   name="payer"
+                                                                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                                   type="number"
+                                                                                   placeholder="677777777"/>
+                                                                            <!--label for="payer">Num&eacute;ro Payeur</label-->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-12 px-md-5 px-4 mt-1 payBtnBloc text-center">
+
+                                                                    <button type="submit"
+                                                                            class="btn btn-success text-white col-3 btnPay">Payer</button>
+
+                                                                </div>
+
+                                                                <div class="col-12 px-md-5 px-4 mt-3 payMsg text-center"
+                                                                     id="payMessage_1">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade show tabGlobal tabForm" id="cartBank"
+                                                             role="tabpanel"
+                                                             aria-labelledby="cartBank-tab">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <div class="d-flex flex-column px-md-5 px-4 mb-2">
+                                                                        <span>Credit Card</span>
+                                                                        <div class="">
+                                                                            <div class="card-container">
+                                                                                <div class="card-type"></div>
+                                                                                <input type="text" id="creditCart"
+                                                                                       class="form-control text-danger"
+                                                                                       name="creditCart"
+                                                                                       autocomplete="off"
+                                                                                       placeholder="0000 0000 0000 0000"
+                                                                                       onkeyup="$cc.validate(event)"
+                                                                                       maxlength="16"/>
+                                                                                <input type="hidden" type="text"
+                                                                                       value="0"
+                                                                                       id="isValidNum"
+                                                                                       name="isValidNum">
+                                                                                <div class="card-valid justify-content-center">
+                                                                                    <i class="uil uil-check text-success d-none"
+                                                                                       id="validCart"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-2">
+                                                                        <span>Expiration<span class="ps-1">Date</span></span>
+                                                                        <div class="form-floating">
+                                                                            <input type="date" class="form-control"
+                                                                                   id="dateExpire"
+                                                                                   name="dateExpire"
+                                                                                   value=""/>
+                                                                            <span class="fas fa-calendar-alt"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-2">
+                                                                        <span>Code CVV</span>
+                                                                        <div class="form-floating">
+                                                                            <input type="text" id="codeCCv"
+                                                                                   name="codeCCv"
+                                                                                   class="form-control"
+                                                                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                                   maxlength="5"/>
+                                                                            <span class="fas fa-lock"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="col-12 col-md-6 col-lg-6">
+                                                                    <div class="d-flex flex-column px-md-5 px-4 mb-2">
+                                                                        <span>Montant à payer</span>
+                                                                        <div class="form-floating">
+                                                                            <input class="form-control payAmountCls"
+                                                                                   id="payAmount2" name="payAmount2"
+                                                                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                                   type="number" placeholder=""/>
+                                                                            <!--label for="payer">Montant à payer</label-->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-12 col-md-6 col-lg-6">
+                                                                    <div class="d-flex flex-column px-md-5 px-4 mb-2">
+                                                                        <span>Name</span>
+                                                                        <div class="form-floating">
+                                                                            <input id="cartName" name="cartName"
+                                                                                   class="form-control text-uppercase"
+                                                                                   type="text"
+                                                                                   value=""/>
+                                                                            <span class="far fa-user"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-12 px-md-5 px-4 mt-1 payBtnBloc text-center">
+                                                                    <button type="submit"
+                                                                            class="btn btn-success text-white col-3 btnPay">Payer</button>
+                                                                </div>
+
+                                                                <div class="col-12 px-md-5 px-4 mt-3 payMs text-centerg"
+                                                                     id="payMessage_2">
+                                                                </div>
+
+                                                                <!--div class="col-12  mt-1 btnPrint text-center d-none" id="">
+                                                                    <span id="dwl" class="w-25 h-25 " onclick="xajax_printFicheRecive()">
+                                                                        <img src="./assets/img/pdf.png" class="" alt="" style="border-radius: 10px!important;cursor: pointer!important;width:15%!important;height: 100%!important;" width="100px">
+                                                                    </span>
+                                                                </div-->
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade show tabGlobal tabForm" id="virement"
+                                                             role="tabpanel"
+                                                             aria-labelledby="virement-tab">
+
+                                                            <div class="row">
+
+                                                                <div class="col-12 col-md-4 col-lg-4">
+                                                                    <div class="d-flex flex-column px-md-5 px-4 mb-2">
+                                                                        <span>Montant à payer</span>
+                                                                        <div class="form-floating">
+                                                                            <input class="form-control payAmountCls"
+                                                                                   id="payAmount3" name="payAmount3"
+                                                                                   oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                                   type="number" placeholder=""/>
+                                                                            <!--label for="payer">Montant à payer</label-->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="col-12 col-md-8 col-lg-8">
+                                                                    <div class="d-flex flex-column px-md-5 px-4 mb-2">
+                                                                        <span>Nom de la Banque</span>
+                                                                        <div class="form-floating">
+                                                                            <select class="form-control form-select"
+                                                                                    id="virBanque"
+                                                                                    name="virBanque"
+                                                                                    aria-label="Nom de la Banque">
+                                                                                <option value=""></option>
+                                                                                <option value="SGC">Société Générale
+                                                                                    Cameroun
+                                                                                </option>
+                                                                                <option value="UBA">United Bank for
+                                                                                    Africa
+                                                                                </option>
+                                                                                <option value="AFB">Afriland First
+                                                                                    Bank
+                                                                                </option>
+                                                                                <option value="BICEC">Banque
+                                                                                    Internationale du
+                                                                                    Cameroun pour
+                                                                                    l'Epargne et le Crédit
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="col-md-6">
+                                                                    <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-2">
+                                                                        <span>Numero d'Opération</span>
+                                                                        <div class="form-floating">
+                                                                            <input type="text" id="virPayCode"
+                                                                                   class="form-control"
+                                                                                   name="virPayCode"
+                                                                                   placeholder="213123123131"/>
+                                                                            <span class="fas fa-calendar-alt"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-2">
+                                                                        <span>Date d'Opération</span>
+                                                                        <div class="form-floating">
+                                                                            <input type="date" class="form-control"
+                                                                                   id="dateOpe"
+                                                                                   name="dateOpe"
+                                                                                   placeholder="DD/MM/YYYY"/>
+                                                                            <span class="fas fa-lock"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="col-12 px-md-5 px-4 mt-1 payBtnBloc text-center">
+                                                                    <button type="submit"
+                                                                            class="btn btn-success text-white col-3 btnPay">Payer</button>
+                                                                </div>
+
+                                                                <div class="col-12 px-md-5 px-4 mt-3 payMsg text-center"
+                                                                     id="payMessage_3">
+                                                                </div>
+
+                                                                <!--div class="col-12  mt-1 btnPrint text-center d-none" id="">
+                                                                    <span id="dwl" class="w-25 h-25 " onclick="xajax_printFicheRecive()">
+                                                                        <img src="./assets/img/pdf.png" class="" alt="" style="border-radius: 10px!important;cursor: pointer!important;width:15%!important;height: 100%!important;" width="100px">
+                                                                    </span>
+                                                                </div-->
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </section>
+
+
+                    </form>
+                </div>
+
+            </div>
+            <!--/.modal-body -->
+        </div>
+        <!--/.modal-content -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+<!--/.modal -->
+
+
+<!--/. add PJ -->
+<div class="modal fade" id="modal-pj1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content text-center">
+            <div class="modal-header p-3  text-light bg-pink">
+                <span class=""><strong class="" id="">Pièces Jointes</strong></span>
+            </div>
+            <div class="modal-body">
+                <div class="row d-none" id="contacterUsager">
+                    <div class="form-floating">
+                        <button type="button" class="btn btn-primary text-white" onclick="xajax_sendDwnlSMS()">
+                            Contacter l'usager
+                        </button>
+                    </div>
+                </div>
+
+                <p id="text-card-information" class="lead mb-6 text-start mt-4">Merci de joindre les documents requis à votre demande svp!</p>
+                <form class="text-start mb-3" id="rejectform">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 form-group label-floating">
+                            <div class="form-floating">
+                                <select class="blueFont form-control form-select m-0 fldFont text-left w-100" style=""
+                                        id="docList" name="docList" onchange="" data-validation="required"
+                                        placeholder="Type de document (*)" readonly="readonly">
+                                    <option selected="" value="MINEFOP"></option>
+                                </select>
+                                <label for="docList" class="control-label">Type de document (*)</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 form-group label-floating">
+                            <div class="form-floating">
+                                <input id="obsv" name="obsv" type="text" value=""
+                                       class="form-control m-0 fldFont clsFina" placeholder="Observations">
+                                <label for="obsv">Observations</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 form-group label-floating">
+                            <div class="form-floating">
+                                <select class="blueFont form-control form-select m-0 fldFont text-left w-100" style=""
+                                        id="selfVisible" name="selfVisible" onchange="" data-validation="required"
+                                        placeholder="Visible par usager" readonly="readonly">
+                                    <option selected disabled value="2"></option>
+                                    <option selected value="1">Oui</option>
+                                    <option value="0">Non</option>
+                                </select>
+                                <label for="docList" class="control-label">Visible par l'usager</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 form-group label-floating">
+                            <div class="form-floating">
+                                <input type="file" id="fileId" name="fileId" hidden
+                                       onchange="uploadFileBOpj(this.value)">
+                                <button type="button" class="btn btn-primary text-white"
+                                        onclick="openFileDialog1();">Veuillez choisir la piece
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <span id="pjfileName"></span>
+                        </div>
+                    </div>
+                </form>
+                <div class="row" id="pjList">
+
+                </div>
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+
+
+<!--/. add PJ -->
+<div class="modal fade" id="wf-modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content text-center">
+            <div class="modal-header p-3  text-light bg-pink">
+                <span class=""><strong class="" id="">Traitement du dossier No.  <b id="objeId"></b></strong></span>
+            </div>
+            <div class="modal-body">
+                <p id="text-card-information" class="lead mb-6 text-start mt-4 d-none">Merci de joindre les documents requis à votre demande svp!</p>
+                <form class="text-start mb-3" id="fwForm">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 form-group label-floating">
+                            <div class="form-floating">
+                                <select class="form-control m-0 fldFont clsPsg clsPgF clsCivi clsPRdO form-select"
+                                        id="wfMotive" name="wfMotive" required="">
+                                    <option selected value="">Aucun</option>
+                                    <option value="C">Complément information</option>
+                                    <option value="J">Complément PJ</option>
+                                    <option value="Z">Autres</option>
+                                </select>
+                                <label class="control-label">Motif (*)</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 form-group label-floating">
+                            <div class="form-floating">
+                                <input id="wfObsv" name="wfObsv" type="text" value=""
+                                       class="form-control m-0 fldFont clsFina" placeholder="Observations">
+                                <label for="wfObsv">Observations</label>
+                            </div>
+                        </div>
+
+                        <div class="row" id="wfActionBloc">
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--/.modal-content -->
+        </div>
+        <!--/.modal-body -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+
+<script src="./assets/js/plugins.js"></script>
+<script src="./assets/js/theme.js"></script>
+<script src="./assets/js/jquery3.6.3.js"></script>
+<!-- <script src="./assets/js/custom.js"></script> BICEC0118
+<script src="./assets/js/tools.js"></script>-->
+<script src="./plugins/bootstrap/js/bootstrap4.4.1.min.js" type="text/javascript"></script>
+<script src="plugins/notify/pnotify.custom.min.js"></script>
+<script src="plugins/notify/notifytools.js"></script>
+<script src="plugins/colorbox/jquery.colorbox.js"></script>
+<!-- <script src="https://etatbo.adwa.world/plugins/colorbox/jquery.colorbox.js"></script> -->
+<script>
+
+    function viewcreate() {
+        $("#connect").addClass("d-none");
+        $("#create").removeClass("d-none");
+
+    }
+
+    function viewconnect() {
+        $("#create").addClass("d-none");
+        $("#connect").removeClass("d-none");
+    }
+
+    function test() {
+        //let valideniu = document.getElementById("niu").checkValidity();
+        //let validemail = document.getElementById("email").checkValidity();
+        //let validephone = document.getElementById("phone").checkValidity();
+
+        let valniu = $('#forgotPwdForm input').eq(0).val()
+        let valphone = $('#forgotPwdForm input').eq(1).val()
+        let valmail = $('#forgotPwdForm input').eq(2).val()
+
+
+        if (valniu == "" || valmail == "" || valphone == "") {
+            alert("Renseignez tous les champs du formulaire");
+        } else {
+            $("#tab2").removeClass("disabled");
+            $("#tab1").removeClass("active");
+            $("#tab2").addClass("active");
+            $("#tab-1").removeClass("show");
+            $("#tab-1").removeClass("active");
+            $("#tab-2").addClass("show");
+            $("#tab-2").addClass("active");
+        }
+
+        document.getElementById("txt").innerHTML = valmail;
+
+    }
+
+    function forgtpwd() {
+        let password = document.getElementById("newPwd")
+        let confirm_password = document.getElementById("cfmPwd");
+
+        if (password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    }
+
+
+</script>
+
+
+
+<script src="./plugins/flexselect/liquidmetal.js"></script>
+<script src="./plugins/flexselect/jquery.flexselect.js"></script>
+
+<script src="./plugins/echarts.min.js"></script>
+<script src="./plugins/apexcharts.js"></script>
+<script src="./plugins/simple-datatables/simple-datatables.js"></script>
+
+
+	<script src="./plugins/form-validator/jquery.form-validator.js"></script>
+	<script src="./plugins/jquery.autocomplete.min.js" type="text/javascript"></script>
+	<script src="./plugins/colorbox/jquery.colorbox.js" type="text/javascript"></script>
+
+	<script src="plugins/intlTelInput/js/intlTelInput-jquery.min.js" type="text/javascript"></script>
+	<script src="plugins/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+
+	<script src="plugins/notify/pnotify.custom.min.js"></script>
+	<script src="plugins/notify/notifytools.js"></script>
+	<script src="plugins/html5shiv.min.js"></script>
+	<script src="plugins/response.min.js"></script>
+	<script src="plugins/daterangepicker/moment.min.js" type="text/javascript"></script>
+	<script src="plugins/daterangepicker/daterangepicker.min.js" type="text/javascript"></script>
+
+	<script src="./assets/js/tools.js"></script>
+
+	<script src="./plugins/alertify/alertify.min.js"></script>
+	<script type="text/javascript">
+	//override defaults
+	alertify.defaults.transition = "slide";
+	alertify.defaults.theme.ok = "btn btn-success";
+	alertify.defaults.theme.cancel = "btn btn-danger";
+	alertify.defaults.theme.input = "form-control";
+
+
+        function rejectBulletin(code) {
+            $("#rejectTitle").html(code);
+            $("#modal-reject").modal("show");
+        }
+
+        function hideProgressBar() {
+        $("#fileName").text("");
+        document.getElementById("myBar").style.width = 0 + "%";
+        document.getElementById("percent").innerHTML = 1 + "%";
+        $("#myProgress").addClass("d-none");
+    }
+
+        function openFileDialog() {
+        if ($('#certifPwd').val() == '' || $('#certifPwd').val().trim() == '') {
+        show_stack_topleft('error', '', 'Veuillez renseigner le mot de passe');
+        return 1;
+    }
+        //certifTitle
+        hideProgressBar();
+        $('#blocActionBtn button').removeAttr('disabled');
+        $('#certifInput').trigger('click');
+    }
+
+        function showCertifModal() {
+
+        var str = 'Confirmation de ';
+        hideProgressBar();
+        $("#certifInput")[0] = null;
+        $('#blocActionBtn button').removeAttr('disabled');
+        $('#cancelCertifBtn').addClass('d-none');
+        $('#certifValBtn').addClass('d-none');
+        $('#modal-certif').modal('show');
+
+        if ($('#newetatWf').val() == "VISE") {
+        str = str + ' Visa';
+    } else {
+        str = str + ' Signature';
+    }
+        $('#certifTitle').text(str);
+    }
+
+        function getFileNameCertif(fullPath) {
+        //var fullPath = document.getElementById(idTag).value;
+        console.log(fullPath);
+
+        if (fullPath) {
+
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+        filename = filename.substring(1);
+    }
+        var p = filename.split(".");
+        if (p[p.length - 1] != "pem" && p[p.length - 1] != 'crt') {
+        show_stack_topleft('error', '', 'Certificat invalide');
+    } else {
+        $('#myProgress').removeClass('d-none');
+        uploadFile();
+    }
+        return filename;
+    } else {
+        show_stack_topleft('error', '', 'Certificat invalide');
+    }
+        return "";
+    }
+
+
+        function uploadFile() {
+        let xhr = new XMLHttpRequest();
+
+        if ($('#certifPwd').val() == '' || $('#certifPwd').val().trim() == '') {
+        alertify.error('Veuillez renseigner le mot de passe');
+        //show_stack_topleft('error', '', 'Veuillez renseigner le mot de passe');
+        return 1;
+    }
+
+        xhr.open("POST", "./uploadFile.php?certif=1&pwd=" + $('#certifPwd').val(),
+        xhr.onprogress = event => {
+        var complete = (event.loaded / event.total * 100 | 0);
+        console.log("passssss");
+        console.log(`Downloaded ${event.loaded} of ${event.total} bytes`);
+    },
+        xhr.upload.addEventListener("progress", ({loaded, total}) => {
+        let fileLoaded = Math.floor((loaded / total) * 100);
+        let fileTotal = Math.floor(total / 1000);
+        let fileSize;
+        fileTotal < 1024 ? (fileSize = fileTotal + " KB") : (fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB");
+        console.log(fileLoaded);
+        if (fileLoaded < 97) {
+        document.getElementById("myBar").style.width = fileLoaded + "%";
+        document.getElementById("percent").innerHTML = fileLoaded + "%";
+    }
+    }));
+
+
+        var fd = new FormData();
+        var files = $('#certifInput')[0].files[0];
+        fd.append('file', files);
+
+        xhr.send(fd);
+        xhr.onload = function () {
+
+        // Process our return data
+        document.getElementById("myBar").style.width = 100 + "%";
+        document.getElementById("percent").innerHTML = 100 + "%";
+        try {
+        if (xhr.status >= 200 && xhr.status < 300) {
+        console.log(xhr.responseText);
+
+        var obj = JSON.parse(xhr.responseText);
+        console.log(obj);
+        $('#certifValBtn').addClass('d-none');
+        $('#cancelCertifBtn').addClass('d-none');
+        for (var key in obj) {
+        if (key == "status") {
+        if (obj[key] == "OK") {
+        // alertify.success('OK');
+        alertify.success('Veuillez valider l\'opération');
+        $('#certifValBtn').removeClass('d-none');
+        $('#cancelCertifBtn').removeClass('d-none');
+        //show_stack_topleft('success', '', 'Veuillez valider l\'opération');
+    } else if (obj[key] == "KO1") {
+        alertify.error('Certificat invalide');
+        //show_stack_topleft('error', '', 'Certificat invalide');
+    } else if (obj[key] == "EXPIRE") {
+        alertify.error('Certificat expiré');
+        //show_stack_topleft('error', '', 'Certificat expiré');
+    } else if (obj[key] == "USER") {
+        alertify.error('Utilisateur invalide');
+        //show_stack_topleft('error', '', 'Utilisateur invalide');
+    } else if (obj[key] == "PWD") {
+        alertify.error('Mot de passe incorrect');
+        //show_stack_topleft('error', '', 'Mot de passe incorrect');
+    } else {
+        alertify.error('Certificat invalide');
+        //show_stack_topleft('error', '', 'Certificat invalide');
+    }
+    }
+    }
+
+
+    } else {
+        console.log(xhr.status);
+        show_stack_topleft('error', '', 'Une erreur inattendue est survenue. Merci de r&eacute;essayer plus tard.');
+    }
+    } catch (e) {
+        console.error(e);
+        // $(".itemm" + i).eq(0).remove();
+    }
+
+    };
+    }
+
+        function openFileDialog1() {
+        if ($("#docList").val() == "" || $("#docList").val() == null) {
+        alertify.error('Remplissez les informations');
+        return false;
+    }
+        $('#fileId').trigger('click');
+    }
+
+        function uploadFileBOpj(fullPath) {
+            var filename = "";
+            if (fullPath) {
+
+                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+                var filename = fullPath.substring(startIndex);
+                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+            }
+        }
+
+        $("#pjfileName").text(filename);
+        if (filename == "") {
+        return false;
+    }
+        show_stack_topleft('info', '', 'Envoie en cours. Veuillez patientez svp!');
+        let xhr = new XMLHttpRequest();
+
+        if ($('#docList').val() == '') {
+        alertify.error('Veuillez selectionner le type de document');
+        return 1;
+    }
+
+        // xhr.open("POST", "./uploadFile.php?com=" + $('#obsv').val() + "&pjCode_1=" + $('#docList').val() + "&pjSendCode_1=",
+        xhr.open("POST", "./uploadFile.php?selfVisible=" + $('#selfVisible').val() + "&com=" + $('#obsv').val() + "&pjCode=" + $('#docList').val() + "&pjSendCode_1=" + $("#code").val(),
+        xhr.onprogress = event => {
+        var complete = (event.loaded / event.total * 100 | 0);
+        console.log("passssss");
+        console.log(`Downloaded ${event.loaded} of ${event.total} bytes`);
+    },
+        xhr.upload.addEventListener("progress", ({loaded, total}) => {
+        let fileLoaded = Math.floor((loaded / total) * 100);
+        let fileTotal = Math.floor(total / 1000);
+        let fileSize;
+        fileTotal < 1024 ? (fileSize = fileTotal + " KB") : (fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB");
+        console.log(fileLoaded);
+        if (fileLoaded < 97) {
+        document.getElementById("myBar").style.width = fileLoaded + "%";
+        document.getElementById("percent").innerHTML = fileLoaded + "%";
+    }
+    }));
+
+
+        var fd = new FormData();
+        var files = $('#fileId')[0].files[0];
+        fd.append('file', files);
+
+        xhr.send(fd);
+        xhr.onload = function () {
+
+        // Process our return data
+        document.getElementById("myBar").style.width = 100 + "%";
+        document.getElementById("percent").innerHTML = 100 + "%";
+        try {
+        $("#pjfileName").text("");
+        if (xhr.status >= 200 && xhr.status < 300) {
+        console.log(xhr.responseText);
+
+        var obj = JSON.parse(xhr.responseText);
+        console.log(obj);
+
+        alertify.success('Op&eacute;ration r&eacute;alis&eacute;e avec succ&egrave;s');
+        xajax_addPj($('#btnatu').val(), $('#btsoci').val(), $('#docList').val(), $('#obsv').val());
+
+    } else {
+        console.log(xhr.status);
+        show_stack_topleft('error', '', 'Une erreur inattendue est survenue. Merci de r&eacute;essayer plus tard.');
+    }
+    } catch (e) {
+        console.error(e);
+        // $(".itemm" + i).eq(0).remove();
+    }
+
+    };
+    }
+
+        function selectPaymentTabsV02(type) {
+        $("#payForm select").removeAttr("required");
+        $("#payForm  input").removeAttr("required");
+        if (type == 1) {
+        $("#mobileMoney select").attr("required", "required");
+        $("#mobileMoney input").attr("required", "required");
+    } else if (type == 2) {
+        $("#cartBank select").attr("required", "required");
+        $("#cartBank input").attr("required", "required");
+    } else if (type == 3) {
+        $("#virement input").attr("required", "required");
+        $("#virement select").attr("required", "required");
+    }
+        $('#typePay').val(type);
+        return 1;
+    }
+
+        function oprnPjColorbox() {
+        window.location = 'paiement.php?code=' + $("#code").val();
+        return;
+
+        $.colorbox({
+        inline: true,
+        href: "#pjFrame",
+        top: "10%",
+        width: "50%",
+        height: "55%",
+        title: "Choix du moyen de paiement",
+        escKey: true,
+        overlayClose: true,
+        closeButton: true,
+        opacity: 0.1,
+        scrolling: true,
+        onOpen: function () {
+        $("#previewDIV").removeClass("d-none");
+    },
+        onCleanup: function () {
+        $("#previewDIV").addClass("d-none")
+    },
+        //onClosed: cleanPreview()
+    });
+    }
+
+        function confirmCertif() {
+            $('#modal-certif').modal('hide');
+                if($('#newetatWf').length){
+                var newetatWf = $('#newetatWf').val();
+                if (newetatWf == 'RECOUVRE') {
+                xajax_initPaymentForm($('#code').val());
+            } else {
+                $('#bulletinForm').submit();
+            }
+                return false;
+
+            }else{
+                $('#syntheseForm').submit();
+            }
+        }
+
+        function selectPj(isVisi) {
+	        $('#selfVisible').val(isVisi);
+	    }
+	</script>
+
+<script src="./assets/js/admin.js"></script>
+<script>
+	document.querySelector('.img__btn').addEventListener('click', function() {
+		document.querySelector('.cont').classList.toggle('s--signup');
+	});
+</script>
+	
+
+</body>
+
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+</head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container-fluid">
+      <h2 class="text-start p-3">My Tasks</h2>
+      <button class="navbar-toggler btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="card todo shadow ">
+    <nav class="border-content">
+      <div class="nav nav-underline nav-fills nav-justified mb-3" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-Todo-tab" data-bs-toggle="tab" data-bs-target="#nav-Todo" type="button"
+          role="tab" aria-controls="nav-Todo" aria-selected="true">
+          To-do
+        </button>
+        <button class="nav-link" id="nav-DoSoon-tab" data-bs-toggle="tab" data-bs-target="#nav-DoSoon" type="button"
+          role="tab" aria-controls="nav-DoSoon" aria-selected="false">
+          Urgent
+        </button>
+        <button class="nav-link" id="nav-complete-tab" data-bs-toggle="tab" data-bs-target="#nav-complete" type="button"
+          role="tab" aria-controls="nav-complete" aria-selected="false">
+          Complete
+        </button>
+      </div>
+    </nav>
+    <div class="tab-content p-3 border bg-light border-cus" id="nav-tabContent" style="height: 80vh;">
+      <div class="tab-pane fade active show" id="nav-Todo" role="tabpanel" aria-labelledby="nav-Todo-tab">
+        <!-- Liste des taches -->
+      </div>
+      <div class="tab-pane fade" id="nav-DoSoon" role="tabpanel" aria-labelledby="nav-DoSoon-tab">
+        <p>
+          <strong>This is some placeholder content the DoSoon tab's associated
+            content.</strong>
+          Clicking another tab will toggle the visibility of this one for the
+          next. The tab JavaScript swaps classes to control the content
+          visibility and styling. You can use it with tabs, pills, and any
+          other <code>.nav</code>-powered navigation.
+        </p>
+      </div>
+      <div class="tab-pane fade" id="nav-complete" role="tabpanel" aria-labelledby="nav-complete-tab">
+        <!-- Liste des taches terminées-->
+      </div>
+    </div>
+  </div>
+  <!-- Tabs content -->
+
+  <!-- add button and his modal -->
+  <button type="button" class="btn bg-primary newTask shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="bi bi-plus-lg h1 text-white"></i>
+  </button>
+  <div class="modal fade shadow" data-bs-backdrop="static" data-bs-keyboard="false" id="exampleModal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2 class="text-center mb-5">Nouvelle tâche</h2>
+
+          <form>
+            <div class="mb-5">
+              <label for="taskName">Nom de la tâche</label><br />
+              <input type="text" name="text" class="input" placeholder="Type something here...." for="taskName"
+                id="taskname" />
+            </div>
+            <div class="mb-5">
+              <label for="description">description</label><br />
+              <input type="textarea" name="text" class="input" placeholder="Type something here...." for="description"
+                id="taskdescription" />
+            </div>
+            <div class="mb-5">
+              <label for="taskDate">Date et heure</label>
+              <input type="datetime-local" class="" id="taskDate" />
+            </div>
+            <div class="mb-5">
+              <label for="taskcategorie">Catégorie de la tâche</label>
+              <select class="" id="taskcategorie">
+                <option selected>Habitude</option>
+                <option value="maison">Maison</option>
+                <option value="travail">Travail</option>
+                <option value="social">social</option>
+                <option value="hobbies">Hobbies</option>
+              </select>
+            </div>
+            <div class="form-check mb-5">
+              <input class="form-check-input text-secondary" type="checkbox" value="" id="alerte" />
+              <label class="form-check-label" for="alerte">Me prévenir 30 mins avant</label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" onclick="createtask()">
+            Save Task
+          </button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="JS/bootstrap.js"></script>
+  <script src="JS/jquery.js"></script>
+  <script src="JS/script.js"></script>
+</body>
+
+</html>
