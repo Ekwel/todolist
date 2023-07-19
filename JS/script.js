@@ -213,9 +213,7 @@ function deleteTaskDone(id) {
                       <i class="bi bi-three-dots"></i>
                       </button>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" id="modif" onclick="modifTask(${item.id})">Modifier</a></li>
-                        <li><a class="dropdown-item" href="#" id="complete" onclick="sendToComplete(${item.id})">Done</a></li>
-                        <li><a class="dropdown-item" href="#" id="delete" onclick="deleteTask(${item.id})">Delete</a></li>
+                        <li><a class="dropdown-item" href="#" id="delete" onclick="deleteTaskDone(${item.id})">Delete</a></li>
                       </ul>
                     </li>
                   </div>
